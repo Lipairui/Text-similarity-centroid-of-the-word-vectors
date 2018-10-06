@@ -2,10 +2,10 @@
 Compute text similarity by calculating the cosine similarity of document vectors (Centroid of word vectors)
 
 ## Use pretrained word2vec model
-Support both English and Chinese text format
-Chinese word2vec CBOW: utf8  2.18G
-http://pan.baidu.com/s/1qX334vE
-English word2vec 1.5G
+Support both English and Chinese text format   
+Chinese word2vec CBOW: utf8  2.18G   
+http://pan.baidu.com/s/1qX334vE     
+English word2vec 1.5G     
 https://drive.google.com/uc?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM&export=download
 
 ## Example usage
