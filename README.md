@@ -1,14 +1,14 @@
-#Text similarity: centroid of the word vectors
+# Text similarity: centroid of the word vectors
 Compute text similarity by calculating the cosine similarity of document vectors (Centroid of word vectors)
 
-##Use pretrained word2vec model
+## Use pretrained word2vec model
 Support both English and Chinese text format
 Chinese word2vec CBOW: utf8  2.18G
 http://pan.baidu.com/s/1qX334vE
 English word2vec 1.5G
 https://drive.google.com/uc?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM&export=download
 
-##Example usage
+## Example usage
 def example():
     # English text example
     docs1 = ['a speaker presents some products',
@@ -36,7 +36,7 @@ def example():
         print(docs2[i])
         print('Similarity: %.4f' %sims[i])
 
-##Example results
+## Example results
 English:
 a speaker presents some products
 the speaker is introducing the new products on a fair.
