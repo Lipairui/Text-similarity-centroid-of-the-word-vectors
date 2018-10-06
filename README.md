@@ -3,7 +3,7 @@ Compute text similarity by calculating the cosine similarity of document vectors
 
 ## Dependencies    
 python 3.6.5   
-numpy,gensim,sklearn,nltk,jieba,pandas,codecs,re
+numpy, gensim, sklearn, nltk, jieba, pandas, codecs, re
 
 ## Use pretrained word2vec model
 Support both English and Chinese text format   
