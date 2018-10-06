@@ -116,10 +116,11 @@ def doc_sim(lang,docs1,docs2):
     Function:
         calculate similarity of document pairs 
     Input: 
-        doc1:  document strings list1
-        doc2: document strings list2
+        lang: text language-Chinese for 'cn'/ English for 'en'
+        docs1:  document strings list1
+        docs2: document strings list2
     Output:
-        similarity of doc1 and doc2:
+        similarity list of docs1 and docs2 pairs:
             value ranges from 0 to 1;
             -1 means error
     '''
