@@ -91,7 +91,12 @@ def calculate_similarity(model,doc1,doc2):
     else:
         vec1 = np.array(doc_vector(model,doc1)).reshape(1,-1)
         vec2 = np.array(doc_vector(model,doc2)).reshape(1,-1)
-        return float(cosine_similarity(vec1,vec2)[0][0])
+        cos = cosine_similarity(vec1,vec2)[0][0]      
+        # regularize value of cos to [-1,1]
+        if cos<-1.0:cos=-1.0
+        if cos>1.0:cos=1.0      
+        sim = 1-np.arccos(cos)/np.pi 
+        return sim
 
 def regularize_sim(sims):
     '''
@@ -158,8 +163,13 @@ def doc_sim(lang,docs1,docs2):
     return r_sims
 
 def main_cn():
-    corpus = ['baidu_011_1','weixin_011_1', 'ifly_011_1','baidu_004','weixin_004', 'ifly_004','baidu_004_02','weixin_004_02','ifly_004_02',
+    corpus = ['baidu_003_02','weixin_003_02','ifly_003_02',
+              'baidu_008','weixin_008','ifly_008',
+              'baidu_006_01','weixin_006_01', 'ifly_006_01',
+              'baidu_004','weixin_004', 'ifly_004',
+              'baidu_004_02','weixin_004_02','ifly_004_02',
                'baidu_rePunct_huiting','weixin_rePunct_huiting', 'ifly_rePunct_huiting']
+#     corpus = ['170213']
     for c in corpus:
         LogInfo(c+' start')     
         # read data
@@ -169,7 +179,7 @@ def main_cn():
         # calculate similarity
         sims = doc_sim('cn',docs1,docs2)
         # save result as .xls
-        save_path = '../res/'+c+'_w2v06.xls'
+        save_path = '../res/'+c+'_w2v09.xls'
         res = pd.DataFrame(columns=['id','REF','HYP','semantic_similarity','SER','WER','difference'])
         res.id = data.id
         res.REF = docs1
@@ -218,6 +228,8 @@ def example():
     docs2 = ['对待每件事都不能轻言放弃', 
              '学海无涯，天道酬勤',
              '他和朋友去逛街']
+
+
     sims = doc_sim('cn',docs1,docs2)
     for i in range(len(sims)):
         print(docs1[i])
@@ -225,6 +237,5 @@ def example():
         print('Similarity: %.4f' %sims[i])
         
 if __name__=='__main__':
+#     main_cn()
     example()
-    
-    
