@@ -43,24 +43,24 @@ https://drive.google.com/uc?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM&export=download
 ### English:   
 a speaker presents some products    
 the speaker is introducing the new products on a fair.     
-Similarity: 0.6663         
+Similarity: 0.7321        
 
 vegetable is being sliced.     
 someone is slicing a tomato with a knife on a cutting board.     
-Similarity: 0.5581     
+Similarity: 0.6885    
 
 man sitting using tool at a table in his home.     
 The president comes to China     
-Similarity: 0.2418    
+Similarity: 0.5777  
 ### Chinese:      
 做任何事都不能三天打鱼，两天晒网        
 对待每件事都不能轻言放弃     
-Similarity: 0.5986 
+Similarity: 0.7043
 
 学无止境      
 学海无涯，天道酬勤       
-Similarity: 0.5011         
+Similarity: 0.6671        
 
 他整天愁眉苦脸      
 他和朋友去逛街      
-Similarity: 0.2985
+Similarity: 0.5965
